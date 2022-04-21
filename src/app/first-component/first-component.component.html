@@ -1,0 +1,5 @@
+<div class="component-card" [ngClass]="{ 'snapped': ComponentModel.number > 5}">
+  <h2>{{ ComponentModel.title | uppercase }}</h2>
+  <p>{{ ComponentModel.description }}</p>
+  <button (click)="onView()">VIEW</button>
+</div>

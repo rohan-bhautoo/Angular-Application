@@ -1,0 +1,11 @@
+<div class="component-card" [ngClass]="{ 'snapped': ComponentModel.number > 5}">
+  <h2>{{ ComponentModel.title | titlecase }}</h2>
+  <p>Mis en ligne le {{ ComponentModel.createdDate | date: 'd MMMM yyyy, à HH:mm' }}</p>
+  <p>{{ ComponentModel.description }}</p>
+  <p>{{ 84846484.21 | number: '1.0-0' }}</p>
+  <img [src]="ComponentModel.imageUrl" [alt]="ComponentModel.title" />
+  <span [ngStyle]="{ color: 'rgb(0, ' + ComponentModel.number + ', 0)' }"> {{ ComponentModel.number }}</span>
+  <p *ngIf="ComponentModel.location">Taken at {{ ComponentModel.location }}</p>
+  <button (click)="onAdd()">Button</button>
+  <a routerLink="/component">Back</a>
+</div>
